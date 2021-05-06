@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+:root {
+    --clr-light-100: hsl(0, 0%, 100%);
+    --clr-light-200: hsl(0, 0%, 90%);
+    --clr-dark-900: hsl(0, 0%, 5%);
+    --fw-normal: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+    --bg-image: url("giraffe.jpg");
+    --fnt-family: "Roboto", sans-serif;
+}
+
+#root {
+    height: 100vh;
+    background: var(--bg-image) no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    color: var(--clr-light-100);
+    font-family: var(--fnt-family);
+}
+
+.onboarding__form {
+    position: absolute;
+    left: 10rem;
+    top: 10rem;
+    width: 50vh;
+    color: var(--clr-light-600);
+    font-weight: var(--fw-bold);
+    padding: 2em;
+    background-color: var(--clr-dark-900);
+    opacity: 95%;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.875rem;
+
+    input {
+        height: 2rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 0%;
+        border: 0;
+    }
+}
+
+.check__box {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+
+    input {
+        width: 1.125rem;
+        height: 1.125rem;
+        margin-right: 1rem;
+    }
+}
+
+button {
+    font-weight: var(--fw-normal);
+    font-size: 1rem;
+    padding: 0.625rem;
+    color: var(--clr-light-600);
+    background-color: var(--clr-dark-900);
+    border: 1px solid var(--clr-light-100);
+    margin-top: 1.25rem;
+    width: 10vh;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
